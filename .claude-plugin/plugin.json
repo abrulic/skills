@@ -1,0 +1,13 @@
+{
+  "name": "engineering-skills",
+  "description": "Personal engineering skills: code quality, types-from-source, tests, deep modules, bug fixes, two-axis review, and PR descriptions.",
+  "version": "0.1.0",
+  "keywords": [
+    "agent-skills",
+    "code-quality",
+    "typescript",
+    "tdd",
+    "code-review"
+  ],
+  "license": "MIT"
+}

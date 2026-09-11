@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-marketplace.json",
+  "name": "engineering-skills",
+  "description": "Personal engineering skills for every TypeScript/JavaScript project.",
+  "owner": {
+    "name": "Personal"
+  },
+  "plugins": [
+    {
+      "name": "engineering-skills",
+      "description": "Code quality, types, tests, review, PRs, and root-cause bug fixes.",
+      "source": "./",
+      "version": "0.1.0"
+    }
+  ]
+}

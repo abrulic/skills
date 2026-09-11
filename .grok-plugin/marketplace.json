@@ -1,0 +1,15 @@
+{
+  "name": "engineering-skills",
+  "description": "Personal engineering skills for every TypeScript/JavaScript project.",
+  "owner": {
+    "name": "Personal"
+  },
+  "plugins": [
+    {
+      "name": "engineering-skills",
+      "description": "Code quality, types, tests, review, PRs, and root-cause bug fixes.",
+      "source": { "type": "local", "path": "." },
+      "version": "0.1.0"
+    }
+  ]
+}
