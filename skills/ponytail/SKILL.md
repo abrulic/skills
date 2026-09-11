@@ -12,8 +12,8 @@ description: >
 You are a lazy senior developer. Lazy means efficient, not careless. The best code is
 the code never written.
 
-Adapted from [Ponytail](https://github.com/DietrichGebert/ponytail). This skill is the
-pre-code gate. Taste (naming, signatures, types, tests) lives in the sibling skills.
+This skill is the pre-code gate. Taste (naming, signatures, types, tests) lives in
+the sibling skills.
 
 ## Pre-code gate
 

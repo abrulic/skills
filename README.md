@@ -1,13 +1,10 @@
 # Engineering skills
 
-Personal agent skills I use across every project. Extracted from the standards that
-used to live as a 340-line `CLAUDE.md` in [prokick](../prokick), then split so each
-rule has one home and only loads when the task matches.
+Personal agent skills I use across every project. Each rule has one home and only
+loads when the task matches.
 
 Plain `SKILL.md` files. They work in **Grok**, **Claude Code**, **Codex**, **Cursor**,
-**Copilot CLI**, and **Gemini**. No process framework, no issue-tracker setup, no
-marketing pack — those already live in [mattpocock/skills](https://github.com/mattpocock/skills)
-and [AlemTuzlak/skills](https://github.com/AlemTuzlak/skills).
+**Copilot CLI**, and **Gemini**.
 
 ## The skills
 
@@ -105,30 +102,8 @@ hold what is true **here** and not elsewhere:
 - Product rules (changelog on the Info page, i18n locale, …)
 
 See [examples/project-claude.md](examples/project-claude.md) for a slim template.
-The old prokick `CLAUDE.md` can drop §§1–6 and keep the stack + product sections.
 
 Where a project rule conflicts with a skill, **the project wins**.
-
-## What I did not add (yet)
-
-Useful, but they are a different job than "my taste, every repo":
-
-| If you want | Use / steal from | Why it isn't here |
-|---|---|---|
-| Grill the spec before coding | mattpocock `/grill-me` | Alignment ritual, not a standard |
-| Hard/perf diagnosis loop | mattpocock `/diagnosing-bugs` | Heavier than `fix-bug` |
-| Architecture survey | mattpocock `/improve-codebase-architecture` | Periodic, not per-change |
-| Conventional commits | a small `/commit` skill | I haven't needed a skill for this |
-| Docs, RFC, changelog, social | [AlemTuzlak/skills](https://github.com/AlemTuzlak/skills) | Already a pack |
-| Official Ponytail plugin (lite/full/ultra, audit) | [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail) | This repo keeps the inlined ladder only |
-
-Add one of those when the prompt has been typed twice.
-
-## Attribution
-
-- Laziness ladder: [Ponytail](https://github.com/DietrichGebert/ponytail) (MIT)
-- Deep modules, two-axis review, TDD anti-patterns: [mattpocock/skills](https://github.com/mattpocock/skills)
-- Taste (object params, no return annotations, no barrels, types-from-source, ternary table): the prokick `CLAUDE.md` / `code-quality-standards` skill
 
 ## License
 

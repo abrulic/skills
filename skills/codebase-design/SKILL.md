@@ -12,8 +12,7 @@ description: >
 Design **deep modules**: a lot of behaviour behind a small interface, placed at a clean
 seam, testable through that interface. Use these terms exactly.
 
-Adapted from [mattpocock/skills `codebase-design`](https://github.com/mattpocock/skills)
-and Ousterhout's *A Philosophy of Software Design*.
+Vocabulary from Ousterhout's *A Philosophy of Software Design*.
 
 ## Glossary
 

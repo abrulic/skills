@@ -19,7 +19,6 @@ fixed point:
 Both axes run as **parallel sub-agents** so they don't pollute each other's context.
 Then this skill aggregates. Do not merge or rerank findings across axes.
 
-Adapted from [mattpocock/skills `code-review`](https://github.com/mattpocock/skills).
 The Fowler smell list lives **here**, not in `code-quality-standards`.
 
 ## 1. Pin the fixed point
