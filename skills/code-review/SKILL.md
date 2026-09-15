@@ -59,7 +59,9 @@ report "no spec available".
 Read, and pass to the Standards sub-agent:
 
 1. This pack, in full: `code-quality-standards`, `types-from-source`, `test-discipline`,
-   `test-strategy`, `ui-verify`, `codebase-design`, `ponytail`. Paste the smell baseline below as well.
+   `test-strategy`, `ui-verify`, `mobile-a11y`, `i18n-copy`, `react-router-app`,
+   `codebase-design`, `ponytail`. Paste the smell baseline below as well. Apply
+   `react-router-app` and `i18n-copy` only if this repo matches their gates.
 2. The current repo's `AGENTS.md` / `CLAUDE.md` / `CODING_STANDARDS.md` if present.
    **The repo overrides this pack** where they conflict (e.g. a library that documents
    positional public APIs).

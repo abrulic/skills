@@ -5,7 +5,8 @@ description: >
   object-parameter signatures, control flow, and the ternary decision table. Use when
   writing, reviewing, or refactoring code, choosing function signatures, naming things,
   or splitting a module. Do not use for test-file craft (test-discipline), layer choice
-  (test-strategy), type-source rules (types-from-source), or git/PR workflow.
+  (test-strategy), type-source rules (types-from-source), mobile/a11y (mobile-a11y),
+  i18n copy (i18n-copy), React Router apps (react-router-app), or git/PR workflow.
 ---
 
 # Code Quality Standards
@@ -17,7 +18,8 @@ belong in that project's `AGENTS.md` / `CLAUDE.md`.
 How much to write, and whether to write at all: `ponytail`.
 Where a type comes from: `types-from-source`.
 How to test: `test-discipline`. Which layer, and whether it can catch a bug: `test-strategy`.
-Screen jobs in the browser: `ui-verify`.
+Screen jobs in the browser: `ui-verify`. Mobile-first and a11y: `mobile-a11y`.
+User-facing copy: `i18n-copy`. React Router framework mode: `react-router-app`.
 Module shape: `codebase-design`.
 
 ## Non-negotiable rules

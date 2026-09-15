@@ -68,9 +68,11 @@ test is too narrow. Pin the job and usability.
 
 ## Widths
 
-If the app is used on a phone and a desktop, run the same jobs at a phone width and
-a desktop width. Unknown layout failures are often width-specific. Do not add a width
-because of a widget type; add it because people use that width.
+**Mobile is required.** These products are mobile first. Run the same jobs on
+desktop only when this layout actually changes at a breakpoint.
+
+How to *build* the mobile canvas and the keyboard path: `mobile-a11y`. This skill
+only checks that the jobs still work.
 
 ## Look
 
@@ -81,7 +83,7 @@ is still there. Do not use pixel snapshots as the expected value (`test-discipli
 ## Procedure
 
 1. List jobs on this screen, and on every other screen that imports the changed UI.
-2. Print: `jobs: <list> on <routes> @ <widths>`.
+2. Print: `jobs: <list> on <routes> @ mobile` (and desktop if the layout changes).
 3. For each job: drive it, assert the outcome, assert the needed control is usable,
    assert the default job is usable after.
 4. Would-fail on "person cannot do the job / cannot use the page after".
@@ -94,6 +96,6 @@ is still there. Do not use pixel snapshots as the expected value (`test-discipli
 | Asserting a title/role exists | Presence | Job outcome + usable control. |
 | A table of widget kinds to special-case | Catalogue | Jobs + usable. The next bug is not in the table. |
 | Only the screen you had open | Shared UI | Grep the primitive; run jobs on each route. |
-| Only one width, app is used on two | Width-specific miss | Same jobs at phone and desktop. |
+| Only desktop | Mobile is the product | Mobile required; desktop only if layout changes. |
 | Unit test of a helper, no screen job | Wrong layer | `test-strategy` → browser, then this skill. |
 | Pixel snapshot as the oracle | Flaky, banned | Usable + job outcome + look. |

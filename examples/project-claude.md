@@ -4,7 +4,8 @@ Stack: \<framework\> · \<bundler\> · \<styling\> · \<server\> · \<db\> · Bi
 
 Cross-project taste lives in the engineering-skills pack (`ponytail`,
 `code-quality-standards`, `types-from-source`, `test-discipline`, `test-strategy`,
-`ui-verify`, `codebase-design`). This file only holds what is true **in this repo**.
+`ui-verify`, `mobile-a11y`, `i18n-copy`, `react-router-app`, `codebase-design`).
+This file only holds what is true **in this repo**.
 
 ---
 
@@ -18,11 +19,9 @@ pnpm test
 
 ## Stack conventions
 
-- Navigation is typesafe via `href()` from `react-router`. Never hardcode path strings.
-- Typed route modules: `Route.LoaderArgs`, `Route.ComponentProps` from `./+types/<route>`.
-- Server-only modules use the `.server.ts` suffix. Read env via `~/env.server`.
-- DB access lives in per-feature `*.server.ts` query modules, not in routes.
-- After adding or renaming a route, run `pnpm typegen`.
+- React Router framework mode: `react-router-app` (this repo matches that gate).
+- Locales live in `resources/locales/{lng}/common.json`. Fallback is `en`.
+- After adding or renaming a route, `pnpm typegen`.
 
 ## Product rules
 

@@ -16,6 +16,9 @@ it; they do not restate it.
 | What/how to test, tautology ban, red-green | `test-discipline` |
 | Layer choice (unit/integration/e2e), independent oracle, would-fail gate | `test-strategy` |
 | Screen jobs and usability in the browser (unknown UI breakage) | `ui-verify` |
+| Mobile-first layout, thumb + keyboard path, accessible names | `mobile-a11y` |
+| User-facing copy through i18n keys | `i18n-copy` |
+| React Router framework mode: href(), typed routes, no DB in the route | `react-router-app` |
 | Deep module / seam / adapter vocabulary | `codebase-design` |
 | Fowler smells, two-axis review procedure | `code-review` |
 | PR title/body procedure | `pr-description` |
