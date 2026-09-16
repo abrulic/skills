@@ -31,6 +31,8 @@ Module shape: `codebase-design`.
 - No duplicate components/functions with only minor variations — extract the shared behavior.
 - No mixed responsibilities in one module/file.
 - No vague utility names (`helper`, `utils2`, `doStuff`, etc.).
+- No PascalCase or camelCase file names — every file and folder is kebab-case,
+  components included (`member-avatar.tsx` exports `MemberAvatar`). See **Naming**.
 - No overengineering when a simpler equivalent exists.
 - No unnecessary comments — rely on clear naming and structure. Only comment the
   non-obvious *why* (hidden constraint, workaround, subtle invariant).
@@ -71,9 +73,11 @@ Describe intent and result, not mechanism.
 - Components: `ChatMessageList`, `CheckoutStatusBanner`, `ProductGridCard`
 - Provider/adapter modules: `stripePaymentProvider`, `anthropicLlmProvider`
 - Files and folders must be self-explanatory without opening the file.
-- File names are **kebab-case, always** — components included: `member-avatar.tsx` exports
-  `MemberAvatar`. A project `AGENTS.md` may carve out framework exceptions (flat-route
-  filenames, Next.js special files).
+- File and folder names are **kebab-case, always** — components included. The export keeps
+  its PascalCase: `member-avatar.tsx` exports `MemberAvatar`, `use-cart-total.ts` exports
+  `useCartTotal`. A component never gets a PascalCase filename because it holds a component.
+- The only exceptions are filenames a framework itself reads (flat-route files, Next.js
+  special files, `+types`); a project `AGENTS.md` names them.
 
 ## Function signatures and objects
 
