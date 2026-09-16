@@ -14,8 +14,9 @@ These apps are mobile first (often a PWA). A layout that only works on desktop w
 mouse is not the product.
 
 How the screen is *tested* (jobs, hit-target, widths): `ui-verify`. This skill is how
-you **build** the screen so a thumb and a keyboard can finish the job. The words in
-labels and `aria-label`: `i18n-copy` when the repo has i18n.
+you **build** the screen so a thumb and a keyboard can finish the job. Which primitive
+to build it from, and why nothing is sized in px: `ui-components`. The words in labels
+and `aria-label`: `i18n-copy` when the repo has i18n.
 
 Don't catalogue widgets. The next failure is not in a list of roles.
 

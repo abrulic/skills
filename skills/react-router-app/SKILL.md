@@ -52,6 +52,26 @@ Read data from the typed `loaderData` / `actionData` props. Do not re-annotate
 
 Types of loader results: `types-from-source` (derive from the query, do not mirror).
 
+## Forms
+
+**`remix-hook-form` is the form layer.** `useState` per field is not a form: it
+re-renders the whole dialog on every keystroke, validates nowhere, and leaves the
+action parsing raw `FormData` against a second copy of the rules.
+
+- `useRemixForm({ resolver })` on the client, `getValidatedFormData(request, resolver)`
+  in the action. **One schema** module, imported by both — not a `.server.ts` file, or
+  the client cannot import it.
+- Wrap in `RemixFormProvider` and read fields through the library's field components,
+  so the label, the control and the error message share one id and `aria-describedby`.
+- The action returns `{ errors }` on failure; `useRemixForm` puts them back on the
+  fields. It reads them off `useActionData` — or off the fetcher when you pass one.
+- Pass a `fetcher` when the result belongs to one piece of UI, such as a dialog that
+  should close on success. Route `actionData` outlives the submission, so a dialog
+  reading it sees the previous success the moment it reopens.
+- Field values arrive parsed, so the schema takes `z.number()`, not `z.coerce.number()`.
+- Copy in validation messages goes through i18n like any other string (`i18n-copy`) —
+  a raw validator message is untranslated English on screen.
+
 ## Server vs client
 
 - Server-only modules use the `.server.ts` suffix.
@@ -69,5 +89,7 @@ Types of loader results: `types-from-source` (derive from the query, do not mirr
 | `prisma` / `db.` inside `app/routes/` | Data layer in the route | Domain `*.server.ts` (or this repo's query module). |
 | `useLoaderData()` + a hand-written type | Mirror type | `Route.ComponentProps` / `loaderData`. |
 | `fetch("/api/...")` for a form you own | Hand-rolled mutation | `<Form>` to the route action. |
+| `useState` per input, hidden inputs mirroring it | Hand-rolled form | `remix-hook-form` + one shared schema. |
+| A zod schema in a `.server.ts` the form needs | Client cannot import it | Move the schema to its own module. |
 | New route, skipped typegen | `href` and `Route` are stale | Run typegen. |
 | Applying this in a CLI or library package | Wrong repo | Stop. |

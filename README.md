@@ -17,6 +17,7 @@ Plain `SKILL.md` files. They work in **Grok**, **Claude Code**, **Codex**, **Cur
 | [test-strategy](skills/test-strategy/SKILL.md) | Unit vs integration vs e2e; tests that would fail if the product is wrong | auto |
 | [ui-verify](skills/ui-verify/SKILL.md) | Browser tests for screen jobs and usability; unknown UI breakage goes red | auto |
 | [mobile-a11y](skills/mobile-a11y/SKILL.md) | Mobile-first UI; every job works with a thumb and a keyboard | auto |
+| [ui-components](skills/ui-components/SKILL.md) | Which UI primitive to use; one token vocabulary; no px in classes | auto |
 | [i18n-copy](skills/i18n-copy/SKILL.md) | User-facing strings go through i18n keys, not JSX literals | auto |
 | [react-router-app](skills/react-router-app/SKILL.md) | Framework-mode RR: href(), typed routes, no DB in the route file | auto |
 | [codebase-design](skills/codebase-design/SKILL.md) | Designing a module, placing a seam | auto |
@@ -34,6 +35,7 @@ test-discipline          → how the test is written
 test-strategy            → which layer, and would it catch a bug
 ui-verify                → screen jobs and usability in the browser
 mobile-a11y              → mobile-first, thumb + keyboard
+ui-components            → library primitive, one token set, rem not px
 i18n-copy                → user-facing copy is a translation key
 react-router-app         → href(), typed routes, data in domain modules
 codebase-design          → how deep the module is

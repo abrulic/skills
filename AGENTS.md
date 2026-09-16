@@ -17,8 +17,9 @@ it; they do not restate it.
 | Layer choice (unit/integration/e2e), independent oracle, would-fail gate | `test-strategy` |
 | Screen jobs and usability in the browser (unknown UI breakage) | `ui-verify` |
 | Mobile-first layout, thumb + keyboard path, accessible names | `mobile-a11y` |
+| Component library primitives, design tokens, relative units (no px) | `ui-components` |
 | User-facing copy through i18n keys | `i18n-copy` |
-| React Router framework mode: href(), typed routes, no DB in the route | `react-router-app` |
+| React Router framework mode: href(), typed routes, no DB in the route, forms | `react-router-app` |
 | Deep module / seam / adapter vocabulary | `codebase-design` |
 | Fowler smells, two-axis review procedure | `code-review` |
 | PR title/body procedure | `pr-description` |

@@ -19,6 +19,7 @@ How much to write, and whether to write at all: `ponytail`.
 Where a type comes from: `types-from-source`.
 How to test: `test-discipline`. Which layer, and whether it can catch a bug: `test-strategy`.
 Screen jobs in the browser: `ui-verify`. Mobile-first and a11y: `mobile-a11y`.
+Which UI primitive, tokens, and no-px units: `ui-components`.
 User-facing copy: `i18n-copy`. React Router framework mode: `react-router-app`.
 Module shape: `codebase-design`.
 
@@ -88,6 +89,11 @@ Describe intent and result, not mechanism.
 - Concise arrow form (no braces + `return`) for single-expression bodies.
 - Object-parameter inputs with 2+ properties: extract a named input type. Exactly 1
   property: keep it inline in the signature.
+- **A component's props are that rule too.** 2+ props means a named, exported
+  `FooProps` type, not an object literal inlined after the destructure — a wrapper
+  cannot reference an anonymous type, so it restates it, and the two drift. Build it
+  from the type that owns the data where one exists (`types-from-source`):
+  `ComponentProps<typeof Input>` for a wrapper, `Truck["id"]` for an identifier.
 - Object-literal shorthand: when values are already in scope, write `{ foo, bar }` —
   never `{ foo: source.foo, bar: source.bar }`. Destructure the source first if you
   need to reuse it. Applies to component props, JSX object literals, and any returned object.
